@@ -128,27 +128,7 @@
 
 
 <script>
-    var vue = new Vue({
-        el:'#box',
-        data:{
-            password:'',
-            username:'',
-            url:"http://www.eyins.cn:5001/api/v0/login"
-        },
-        methods:{
-            Btndata:function () {
-                //发送 get 请求
-                console.log("username="+this.username);
-                console.log("password="+this.password);
-                this.$http.get(this.url,{params:{username:this.username,password:this.password}}).then(function(res){
-                    console.log(res.body);
-                },function(res){
-                    console.log(res.status);
-                });
-            }
-        },
 
-    });
 
 </script>
 </body>
