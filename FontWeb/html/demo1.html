@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+</head>
+<body>
+    <div id="box">
+        <h1>{{msg}}</h1>
+        <label>用户名：</label>
+        <input type="text" v-model="username">
+        <label>密码：</label>
+        <input type="text" v-model="password">
+        <label>邮箱：</label>
+        <input type="text" v-model="email">
+        <input type="button" @click="post()" value="点我异步获取数据(Post)">
+    </div>
+    <script>
+        window.onload = function(){
+        var vm = new Vue({
+        el:'#box',
+        data:{
+            msg:'Hello World!',
+            email:"549780442@qq.com",
+            password:"123456",
+            username:"wei",
+            url:"http://www.eyins.cn:5001/api/v0/register"
+        },
+        methods:{
+            post:function(){
+                //发送 post 请求
+                var data={};
+                data.email=this.email;
+                data.password=this.password;
+                data.username=this.username;
+                console.log(data);
+                data=JSON.stringify(data);
+                console.log(data);
+                this.$http.post(this.url,data).then(function(res){
+                    console.log(res.body);
+                },function(res){
+                    console.log(res.status);
+                });
+            }
+        }
+    });
+}
+    </script>
+</body>
+</html>

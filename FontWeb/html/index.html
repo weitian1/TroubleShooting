@@ -9,26 +9,109 @@
     <script src="../lib/js/bootstrap.min.js"></script>
     <script src="../lib/js/vue.min.js"></script>
     <style>
-        /*body{*/
-        /*background-color: yellow;*/
-        /*}*/
+        body{
+            background-color: #4b4f59;
+        }
+        p{
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .block{
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: white;
+        }
+
+        .one{
+            text-align: center;
+            margin: 50px 0;
+        }
+        .btn{
+            margin-top: 10px;
+        }
+
+        .bg-drack{
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            padding: 100px 0;
+            padding-top: 100px;
+            color: #444444;
+            position: relative;
+            overflow: hidden;
+            background-color: #FFFFFF;
+        }
+
+        .row img{
+            width: 43px;
+            height: 43px;
+        }
+
+        .phmile{
+            float:left;
+            text-align: center;
+        }
+
+        .bg-drack{
+            background-color: #343a40;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .container{
+            text-align: center;
+        }
+
+        .container-three{
+            background-color: white;
+            text-align: center;
+            height: 200px;
+        }
+
+
+
     </style>
 </head>
 <body>
-<button class="btn btn-primary">按钮</button>
 <!-- Single button -->
-<div class="btn-group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Action <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
-        <li><a href="#">Something else here</a></li>
-        <li role="separator" class="divider"></li>
-        <li><a href="#">Separated link</a></li>
-    </ul>
-</div>
+<section class="block">
+        <div class="one">
+            <img src="../lib/img/pengkun.png" alt="">
+            <h1>友福同享共享图书馆</h1>
+            <p>以诚信为基础的图书借阅与分享平台，面向全球，连接人与人之间的工作、生活、信仰！</p>
+            <p>图书●智慧●生命</p>
+            <p>
+                <button class="btn btn-primary">注册加入</button>
+            </p>
+        </div>
+</section>
+
+<section class="dg-block">
+        <div class="bg-drack">
+            <div class="container">
+                <div class="container-two">
+                    <div class="row">
+                        <div class="phmile col-md-4">
+                            <img src="../lib/img/电话.png">
+                            <p>18984311771</p>
+                        </div>
+                        <div class="phmile col-md-4">
+                            <img src="../lib/img/定位.png">
+                            <p>上海市宝山区</p>
+                        </div>
+                        <div class="phmile col-md-4">
+                            <img src="../lib/img/邮件.png">
+                            <p>2667668704@qq.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-three"><p>© 2017 友福图书馆. All Rights Reserved</p></footer>
+</section>
+
+
 <script src="../js/index.js"></script>
 </body>
 </html>
