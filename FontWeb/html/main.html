@@ -23,16 +23,14 @@
             background-color: #9fcdff;
         }
 
-        img{
-            width: 40px;
-            height: 35px;
+        .wang{
+            width: 220px;
+            height: 220px;
+            text-align: center;
+            margin: auto;
         }
 
-        .container{
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-top: 20px;
-        }
+
 
         @media (min-width: 992px){
             .container{
@@ -47,9 +45,9 @@
         }
 
 
-        .col{
-            width: 66.66666667%;
-            background-color: white;
+        .container-one{
+            margin: 20px auto;
+
         }
 
         .form-horizontal{
@@ -57,74 +55,42 @@
             padding-bottom: 20px;
         }
 
+        .userimg{
+            border-radius: 50%;
+            background-color:red;
+            width: 26px;
+            height: 26px;
+            margin-top: 6px;
+
+        }
+
 
 
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="../lib/img/1d290e6f4170f37a72ad050bf75efa01.png" alt="">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-        </ul>
-    </div>
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="../lib/img/1d290e6f4170f37a72ad050bf75efa01.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Bootstrap
+    </a>
+
+    <ul class="nav justify-content-end">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <img src="../lib/img/logo.png" class="userimg">
+        </li>
+    </ul>
 </nav>
 
-<div class="container" id="box">
-    <div class="col">
-        <form class="form-horizontal" method="post" >
-            <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputEmail3" placeholder="username" v-model="username">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label" >password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" v-model="password">
-                </div>
-            </div>
-
-
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Remember me
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="button" class="btn btn-default" @click="Btndata">login</button>
-                </div>
-            </div>
-        </form>
-    </div>
+<div class="container-one">
+    <h1>Manage Gravatars</h1>
+    <p>Pick eimla to modify</p>
 </div>
-</div>
+
 
 
 <script>
