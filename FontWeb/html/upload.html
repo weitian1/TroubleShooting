@@ -56,9 +56,32 @@
             padding-top: 30px;
             padding-bottom: 20px;
         }
-
-
-
+        .local_image{
+            display: inline-block;
+            background-color: blueviolet;
+            padding: 20px;
+            color:white;
+            font-size: 20px;
+            border-radius: 10px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .camera_image{
+            display: inline-block;
+            background-color: blue;
+            padding: 20px;
+            color:white;
+            margin-left: 40px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .container1{
+            padding: 30px;
+        }
+        #box{
+            margin-top: 200px;
+        }
     </style>
 </head>
 <body>
@@ -91,37 +114,13 @@
 </nav>
 
 <div class="container" id="box">
-        <div class="col">
-            <form class="form-horizontal" method="post" >
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="username" v-model="username">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label" >password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" v-model="password">
-                    </div>
-                </div>
-
-
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Remember me
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="button" class="btn btn-default" @click="Btndata">login</button>
-                    </div>
-                </div>
-            </form>
+    <div class="col container1">
+        <h1>上传图片</h1>
+        <div class="local_image col-5" @click="localfile">
+           本地文件
+        </div>
+        <div class="camera_image col-5" @click="camerafile">
+            开启摄像
         </div>
     </div>
 </div>
@@ -131,29 +130,16 @@
     var vue = new Vue({
         el:'#box',
         data:{
-            password:'',
-            username:'',
-            url:"http://www.eyins.cn:5001/api/v0/login"
+
         },
         methods:{
-            Btndata:function () {
-                //发送 get 请求
-                console.log("username="+this.username);
-                console.log("password="+this.password);
-                this.$http.get(this.url,{params:{username:this.username,password:this.password}}).then(function(res){
-                    console.log(res.body);
-                    //如果成功，缓存用户名，并跳转主页面
-                    if(res.body.result==0){
-                        sessionStorage.username=this.username;
-                        location.href="main.html";
-                        console.log(res.body.result);
-                    }
-                },function(res){
-                    console.log(res);
-                });
+            localfile:function () {
+                location.href="localfile.html"
+            },
+            camerafile:function () {
+                location.href="camerafile.html"
             }
-        },
-
+        }
     });
 
 </script>
